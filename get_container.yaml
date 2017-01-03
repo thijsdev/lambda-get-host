@@ -1,0 +1,23 @@
+﻿AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: A starter AWS Lambda function.
+Resources:
+  getcontainer:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: lambda_function.lambda_handler
+      Runtime: python2.7
+      Environment:
+        Variables:
+          S3_BUCKET: lambda-pipeline
+      CodeUri: ./get_container/
+      Description: A starter AWS Lambda function.
+      MemorySize: 128
+      Timeout: 3
+      # Role: 'arn:aws:iam::925284441818:role/lambda_basic_execution'
+      Events:
+        Api1:
+          Type: Api
+          Properties:
+            Path: /getcontainer
+            Method: GET
