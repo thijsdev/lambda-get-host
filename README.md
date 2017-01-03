@@ -9,7 +9,7 @@
 
 3. Deploy the function
 
-    aws cloudformation deploy --template-file /Users/tdevries/GIT/lambda-pipeline/get_container_cf.yml --stack-name lambda-pipeline --capabilities CAPABILITY_IAM
+    aws cloudformation deploy --template-file get_container_cf.yml --stack-name lambda-pipeline --capabilities CAPABILITY_IAM
 
 # Links
 - [Cloudformation package](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/package.html)
@@ -20,3 +20,8 @@
 - [Lambda-python-how-to-create-deployment](http://docs.aws.amazon.com/lambda/latest/dg/lambda-python-how-to-create-deployment-package.html)
 - [Deploying Lambda Functions](http://docs.aws.amazon.com/lambda/latest/dg/deploying-lambda-apps.html)
 - [CodePipeline Access Permissions](http://docs.aws.amazon.com/codepipeline/latest/userguide/access-permissions.html)
+
+# TODO
+- Prepare console screen walk-trough.
+- Create diagrams to show what we build.
+- Tweak the lambda-pipeline/ServerlessPipeline.yaml pipeline Cloudformation file.
