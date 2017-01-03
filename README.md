@@ -1,16 +1,16 @@
 # Working steps
 1. Create bucket to put artifacts
-
+```
     aws s3 mb s3://lambda-pipeline
-
+```
 2. Transform the template-file an upload the artifacts
-
+```
     aws cloudformation package --template-file get_container.yaml --output-template-file get_container_cf.yml --s3-bucket lambda-pipeline
-
+```
 3. Deploy the function
-
+```
     aws cloudformation deploy --template-file get_container_cf.yml --stack-name lambda-pipeline --capabilities CAPABILITY_IAM
-
+```
 # Links
 - [Cloudformation package](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/package.html)
 - [Cloudformation transform](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-section-structure.html)
